@@ -1,0 +1,40 @@
+{% extends "base-dash.html" %}
+{% load static %}
+{% block content %}
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">BasicPageCms</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+        </div>
+      </div>
+
+
+      <h2>Analytics</h2>
+      <p> Viewing information related to the views of the front landing page. (Last 100) </p>
+        <table class="table" style="max-width: 40%;">
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Record</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for d in request_data %}
+            <tr>
+              <th>{{ d.timecreated }} </th>
+              <td>true</td>
+            </tr>
+         {% endfor %}
+          </tbody>
+        </table>
+
+      
+            <p></p>
+        
+      </div>
+    </main>
+  </div>
+</div>
+
+
+
+{% endblock %}
